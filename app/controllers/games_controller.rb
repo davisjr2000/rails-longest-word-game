@@ -63,5 +63,6 @@ class GamesController < ApplicationController
     end
     session[:score] += @score
     redirect_to final_path if session[:score] >= 50
+    redirect_to badfinal_path if session[:score] <= -20
   end
 end
