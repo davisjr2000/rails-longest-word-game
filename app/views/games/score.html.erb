@@ -1,5 +1,9 @@
-
+<h3> Current Score: <%= session[:score].round(2) %></h3>
+<%= link_to :root do %> <div class="btn btn-lg btn-danger">Quit</div> <% end %>
+<div class="container">
 <h1><%= @result %></h1>
 <h2>Your score was <%= @score %></h2>
-<h3><%= @message %>
-<h3><%= link_to("New Game", { action: "new" }) %></h3>
+<h3><%= @message %></h3>
+<!-- <h3><%= link_to("Next turn", { action: "new" }) %></h3> -->
+<%= link_to :new do %> <div class="btn btn-lg btn-success">Next turn</div> <% end %>
+</div>
