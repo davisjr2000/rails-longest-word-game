@@ -1,0 +1,16 @@
+<h1>HERE ARE YOUR LETTERS:</h1>
+<ul class="list-inline">
+  <% @letters.each do |letter| %>
+    <li class="list-letters">
+      <%= letter %>
+    </li>
+  <% end %>
+</ul>
+<form action="/score" method="post">
+  <input type="text" name="attempt" class="form-control">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <%= hidden_field_tag :start_time, @start_time %>
+  <br>
+  <input class="btn btn-success" type="submit" value="Submit!">
+</form>
