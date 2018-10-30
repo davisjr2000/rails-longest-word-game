@@ -10,7 +10,7 @@
   <% end %>
 </ul>
 <form action="/score" method="post">
-  <input type="text" name="attempt" class="form-control" placeholder="Enter your best shot!">
+  <input type="text" name="attempt" class="form-control" placeholder="Enter your best shot!" autofocus>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <%= hidden_field_tag :letters, @letters %>
   <%= hidden_field_tag :start_time, @start_time %>

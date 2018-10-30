@@ -1,5 +1,6 @@
 <div class="container">
 <h1> CONGRATULATIONS!</h1>
 <h2>You took <%= session[:attempts] %> attempts!</h2>
+<h3> IQ: <%= 1000 / session[:attempts].to_i %></h3>
 <%= link_to :root do %> <div class="btn btn-lg btn-success">Play Again!</div> <% end %>
 </div>
